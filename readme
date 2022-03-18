@@ -16,3 +16,11 @@ to check API get all items
 #   "description": "Fresh",
 #   "image": "https://images.ctfassets.net/23aumh6u8s0i/5pnNAeu0kev0P5Neh9W0jj/5b62440be149d0c1a9cb84a255662205/whatabyte_salad-sm.png",
 #   "stock" : 50}' http://localhost:8080/api/menu/items -i
+
+-Git section
+-create new branch
+-git branch <new branch name>
+-move to branch
+-git checkout <existing branch name>
+-create and move to branch
+-git checkout -b <existing branch name>

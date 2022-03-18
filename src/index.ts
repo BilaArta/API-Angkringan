@@ -6,8 +6,9 @@ import express from "express";
 import cors from "cors";
 import helmet from "helmet";
 import {json} from "body-parser";
-import { itemsRouter } from "./items/items.router";
 import connectDB from "./connectDB";
+import { itemsRouter } from "./items/items.router";
+import { productRouter } from "./routes/product.router";
   
  dotenv.config();
 
@@ -31,6 +32,7 @@ import connectDB from "./connectDB";
  app.use(cors());
  app.use(json);
  app.use("/api/menu/items", itemsRouter);
+ app.use("/api/product", productRouter);
  
  /**
   * Server Activation

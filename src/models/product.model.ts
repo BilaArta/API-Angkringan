@@ -31,8 +31,13 @@ const ProductSchema = new Schema<Product>({
     stock : Number,
   });
 
-ProductSchema.static('getProfit', function getProfit(price, cost) {
+ProductSchema.method('getProfit', function getProfit(price, cost) {
     return price * cost;
 })
 
-  const ProductModel = model<Product>('Product', ProductSchema);
+ProductSchema.method('getIngredients', function getIngredients() {
+    return this.ingredients;
+})
+
+const ProductModel = model<Product>('Product', ProductSchema);
+export {ProductModel}
