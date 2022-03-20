@@ -2,9 +2,17 @@
 - npm i express dotenv cors helmet
 - npm i -D typescript
 - npm i -D @types/node @types/express @types/dotenv @types/cors @types/helmet
-When a package doesn't have built-in types, you can get its type definitions through the @types npm namespace, which hosts TypeScript type definitions from the DefinitelyTyped project. Once you install the packages, the TypeScript compiler automatically includes the types, and your IDE can use them to provide you with code assistance.
+When a package doesn't have built-in types, you can get its type definitions through the 
+@types npm namespace, which hosts TypeScript type definitions from the DefinitelyTyped project. 
+Once you install the packages, the TypeScript compiler automatically includes the types, 
+and your IDE can use them to provide you with code assistance.
+
 - npx tsc --init
 - touch .env
+
+- npm i -D ts-node-dev
+
+- "dev": "ts-node-dev --respawn --pretty --transpile-only src/index.ts"
 
 curl http://localhost:7000/api/menu/items -i
 to check API get all items
